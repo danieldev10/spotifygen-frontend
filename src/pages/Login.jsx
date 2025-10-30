@@ -64,7 +64,7 @@ function Login() {
                     Login with Google
                 </a>
                 <a
-                    href={`${API_BASE_URL}/auth/spotify`}
+                    href="https://spotifygen-server.onrender.com/auth/spotify"
                     className="w-full bg-green-600 text-white py-2 block text-center rounded"
                 >
                     Login with Spotify
