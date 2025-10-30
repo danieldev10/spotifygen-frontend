@@ -58,13 +58,13 @@ function Login() {
                     <button className="w-full bg-green-600 text-white py-2 ">Submit</button>
                 </form>
                 <a
-                    href="http://localhost:3000/auth/google"
+                    href={`${API_BASE_URL}/auth/google`}
                     className="w-full bg-red-600 text-white py-2 block text-center rounded"
                 >
                     Login with Google
                 </a>
                 <a
-                    href="http://localhost:3000/auth/spotify"
+                    href={`${API_BASE_URL}/auth/spotify`}
                     className="w-full bg-green-600 text-white py-2 block text-center rounded"
                 >
                     Login with Spotify
