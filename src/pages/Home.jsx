@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
+import { API_BASE_URL } from '../config';
 
 
 function Home() {
@@ -20,7 +21,7 @@ function Home() {
                 navigate('/login')
                 return
             }
-            const response = await axios.get('http://localhost:3000/auth/home', {
+            const response = await axios.get(`${API_BASE_URL}/auth/home`, {
                 headers: {
                     "Authorization": `Bearer ${token}`
                 }

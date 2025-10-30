@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { API_BASE_URL } from '../config';
 
 function Register() {
     const [values, setValues] = useState({
@@ -20,7 +21,7 @@ function Register() {
     const handleSumbit = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.post('http://localhost:3000/auth/register', values)
+            const response = await axios.post(`${API_BASE_URL}/auth/register`, values)
             if (response.status === 201) {
                 navigate('/login');
             }

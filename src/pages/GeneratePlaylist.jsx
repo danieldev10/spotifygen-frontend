@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../config';
 
 function GeneratePlaylist() {
     const [prompt, setPrompt] = useState('');
@@ -19,7 +20,7 @@ function GeneratePlaylist() {
                 return;
             }
 
-            const response = await axios.post('http://localhost:3000/api/generate-playlist', { prompt }, {
+            const response = await axios.post(`${API_BASE_URL}/api/generate-playlist`, { prompt }, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

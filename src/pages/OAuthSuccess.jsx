@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import { API_BASE_URL } from '../config';
 
 function OAuthSuccess() {
     const [searchParams] = useSearchParams();

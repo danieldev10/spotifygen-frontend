@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { API_BASE_URL } from '../config';
 
 function Login() {
     const [values, setValues] = useState({
@@ -18,7 +19,7 @@ function Login() {
     const handleSumbit = async (e) => {
         e.preventDefault()
         try {
-            const response = await axios.post('http://localhost:3000/auth/login', values)
+            const response = await axios.post(`${API_BASE_URL}/auth/login`, values)
             if (response.status === 201) {
                 localStorage.setItem('token', response.data.token);
                 navigate('/');
