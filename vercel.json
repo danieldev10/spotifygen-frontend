@@ -1,7 +1,7 @@
 {
     "rewrites": [
         {
-            "source": "/oauth-success?",
+            "source": "/(.*)",
             "destination": "/"
         }
     ]
