@@ -9,6 +9,6 @@ export default defineConfig({
     outDir: 'dist'
   },
   server: {
-    historyApiFallback: true
+    port: 5173
   }
 })
